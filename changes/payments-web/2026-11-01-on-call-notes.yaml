@@ -6,5 +6,5 @@ window:
   end: 2026-11-02T17:00:00-05:00
 reason: Release the on-call notes in the README (PR #3).
 emergency: false
-requested_by: StefanPanait
-approvers: [StefanPanait]
+requested_by: wendellliam
+approvers: [wendellliam]
