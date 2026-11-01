@@ -9,7 +9,7 @@ import yaml
 
 MAX_WINDOW = timedelta(days=14)
 MAX_EMERGENCY_WINDOW = timedelta(hours=24)
-REQUIRED = {"repo", "version", "environments", "window", "reason", "emergency"}
+REQUIRED = {"repo", "version", "environments", "window", "reason", "emergency", "requested_by", "approvers"}
 
 
 def as_time(v) -> datetime:
@@ -35,6 +35,10 @@ def check(path: pathlib.Path) -> list[str]:
         errors.append("environments must be a non-empty list of names")
     if not isinstance(d["emergency"], bool):
         errors.append("emergency must be true or false")
+    if not isinstance(d["requested_by"], str) or not d["requested_by"].strip():
+        errors.append("requested_by must be a GitHub login")
+    if not isinstance(d["approvers"], list) or not all(isinstance(a, str) for a in d["approvers"]):
+        errors.append("approvers must be a list of GitHub logins")
     if not str(d["reason"]).strip():
         errors.append("reason must not be empty")
     try:
