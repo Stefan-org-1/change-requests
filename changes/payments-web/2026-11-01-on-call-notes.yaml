@@ -7,4 +7,4 @@ window:
 reason: Release the on-call notes in the README (PR #3).
 emergency: false
 requested_by: StefanPanait
-approvers: []
+approvers: [StefanPanait]
