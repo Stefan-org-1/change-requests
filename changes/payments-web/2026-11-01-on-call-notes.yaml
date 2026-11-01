@@ -1,0 +1,10 @@
+repo: payments-web
+version: eed2318410101ac816bf714f3280c82fff3463ff
+environments: [prod]
+window:
+  start: 2026-11-01T12:00:00-05:00
+  end: 2026-11-02T17:00:00-05:00
+reason: Release the on-call notes in the README (PR #3).
+emergency: false
+requested_by: StefanPanait
+approvers: [wendellliam]
