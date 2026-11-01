@@ -1,0 +1,4 @@
+# Last match wins. Routes review requests; the deploy gate decides which approvals count.
+*                         @Stefan-org-1/team-platform
+
+/changes/payments-web/    @Stefan-org-1/sentinels-payments @Stefan-org-1/managers-payments
