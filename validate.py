@@ -29,8 +29,8 @@ def check(path: pathlib.Path) -> list[str]:
         return errors
     if path.parent.name != d["repo"]:
         errors.append(f"repo is {d['repo']} but the file is under changes/{path.parent.name}/")
-    if not re.fullmatch(r"[0-9a-f]{40}", str(d["version"])):
-        errors.append("version must be a full 40-character commit SHA")
+    if not re.fullmatch(r"[0-9a-f]{40}|\d+\.\d+\.\d+", str(d["version"])):
+        errors.append("version must be a release (X.Y.Z) or a full 40-character commit SHA")
     if not d["environments"] or not all(isinstance(e, str) for e in d["environments"]):
         errors.append("environments must be a non-empty list of names")
     if not isinstance(d["emergency"], bool):

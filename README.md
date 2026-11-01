@@ -10,7 +10,7 @@ Add `changes/<repo>/<name>.yaml`:
 
 ```yaml
 repo: payments-web
-version: eed2318...            # full commit SHA
+version: 1.0.0                 # release tag, or a full commit SHA
 environments: [prod]
 window:
   start: 2026-11-02T09:00:00-05:00
