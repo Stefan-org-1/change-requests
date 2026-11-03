@@ -7,4 +7,4 @@ window:
 reason: First deploy that logs in to Azure with OIDC (deploy-v2).
 emergency: false
 requested_by: StefanPanait
-approvers: []
+approvers: [wendellliam]
