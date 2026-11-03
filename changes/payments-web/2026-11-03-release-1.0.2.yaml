@@ -7,4 +7,4 @@ window:
 reason: "Demo: a rogue job that names prod got through review."
 emergency: false
 requested_by: StefanPanait
-approvers: []
+approvers: [wendellliam]
