@@ -2,7 +2,7 @@
 
 Approved deploys. A change says which version of a repo may deploy to which environments, when, and who approved. The deploy gate lets a deploy through only if a change on `main` covers it and its approvers meet what `org-policy` requires for that environment.
 
-This is a mock of a change system such as Jira or ServiceNow. The gate trusts these files as is.
+These files mock the outcome of a change process, not the process. In practice a system such as Jira or ServiceNow runs the request, review and approval. The gate only needs the result: an approved change with its version, environments, window and approvers. This repo holds that result so the gate has something to read, and the gate trusts it as is.
 
 ## Request a change
 
